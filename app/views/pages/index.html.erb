@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Twitter</title>
+    <title>Motorbikes R Us</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,13 +10,30 @@
   </head>
 
   <body>
-    <nav class="level section has-text-centered has-background-primary">
-      <p class="level-item has-text-centered is-size-1">
-        Motorcycles R Us
-      </p>
-      <p class="lever-item has-text-centered">
-      
-    </nav>
+    <section class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+
+
+      <div class="columns">
+        <div class="column">
+          HOME
+        </div>
+        <div class="column">
+          PRODUCTS
+        </div>
+        <div class="column">
+          <%= link_to 'SIGN UP' %>
+        </div>
+        <div class="column">
+          <%= link_to 'LOGIN' %>
+        </div>
+        <div class="column">
+          <%= link_to 'Shopping Cart' %>
+          </div>
+      </div>
+  </nav>
+  </section>
     <div class="container">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
