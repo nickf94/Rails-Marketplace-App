@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-resources :pages
+  devise_for :users
+  get 'pages/products', to: "pages#products"
 
-root 'pages#index'
+  root 'pages#index'
 
 end
