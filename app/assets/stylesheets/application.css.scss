@@ -13,11 +13,28 @@
  *= require_tree .
  *= require_self
  */
-
- {
- background-color: black;
+ body {
+   min-height: 150vh;
+   background: url(image_path("motorcycle-pavement.jpg"));
+   background-size: cover;
  }
 
-$section-padding: 1rem 1.5rem;
+ section {
+   text-align: center;
+   .title {
+     color: #0063B0;
+   }
+   .subtitle {
+     color: #0063B0;
+   }
+ }
+
+ footer{
+   font-size: 24px;
+   background-color: grey;
+   padding-bottom: 10px;
+ }
+
+ $section-padding: 1rem 1.5rem;
 
  @import 'bulma/bulma'

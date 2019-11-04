@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def products
   end
+
+  def shopping_cart
+  end
 end

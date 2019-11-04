@@ -1,26 +1,23 @@
 <section class="container">
-  <nav class="navbar level section has-text-centered has-background-primary" role="navigation" aria-label="main navigation">
+  <nav class="navbar level section has-text-right has-background-primary" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div class="columns">
-        <div class="column is-one-third">
-          MOTORBIKES R US
-        </div>
-        <div class="column">
+        <div class="column is-one-quarter">
           <%= link_to 'HOME', root_path %>
         </div>
-        <div class="column">
+        <div class="column is-one-quarter">
           <%= link_to 'PRODUCTS', pages_products_path %>
         </div>
-        <div class="column">
+        <div class="column is-one-quarter">
           <%= link_to '<i class="fas fa-user-plus"></i>'.html_safe, new_user_registration_path, class: "button is-info is-rounded" %>
         </div>
-        <div class="column">
+        <div class="column is-one-quarter">
           <%= link_to '<i class="fas fa-sign-in-alt"></i>'.html_safe, new_user_session_path, class: "button is-info is-rounded" %>
         </div>
-        <div class="column">
+        <div class="column is-one-quarter">
           <%= link_to '<i class="fas fa-shopping-cart"></i>'.html_safe, class: "button is-link is-rounded" %>
         </div>
-        <div class="column">
+        <div class="column is-one-quarter">
           <%=link_to '<i class="fas fa-sign-out-alt"></i>'.html_safe, destroy_user_session_path, method: 'delete', class: "button is-warning is-rounded" %>
         </div>
       </div>
