@@ -15,25 +15,35 @@
  */
 
  body {
+   font-family: 'Indie Flower', cursive;
    min-height: 100vh;
-   background: url(image_path("motorcycle-pavement.jpg"));
+   background: url(image_path("motorcycle_engine.jpg"));
    background-size: cover;
  }
 
- button {
-   text-align: right;
-   padding: 15px 25px;
-   font-size: 16px;
+ .container {
+   font-family: 'Indie Flower', cursive;
+   font-size: 24px;
  }
 
- .container{
+ .section{
    text-align: center;
    .title {
+     font-family: 'Indie Flower', cursive;
      color: #0063B0;
    }
    .subtitle {
+     font-family: 'Indie Flower', cursive;
      color: #0063B0;
    }
+ }
+
+ .flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: space-around;
+  color: white;
  }
 
  footer{
