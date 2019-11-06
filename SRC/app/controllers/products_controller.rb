@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
@@ -24,17 +25,27 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
+    product = Product.create_product(params[:product][:name], description, params[:product][:description], params[:product][:price])
     @product = Product.new(product_params)
+    @product.name = name
+    @product.cover.attach(params[:product][:cover])
 
-    respond_to do |format|
-      if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
-        format.json { render :show, status: :created, location: @product }
-      else
-        format.html { render :new }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
-      end
+    if @product.save
+      ProductListItem.create_product_list_item(current_user, @product)
+      redirect_to product_list_items_path
+    else
+      render "new"
     end
+  end
+
+  def self.create_product(name, description, price)
+    book = Book.find_product(name, description, price)
+    if (!product)
+      product = Product.new(name: name, description: description, price: price)
+      product.save
+    else
+    return product
+  end
   end
 
   # PATCH/PUT /products/1
