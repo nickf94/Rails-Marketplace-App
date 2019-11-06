@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'shopping_carts/index', to: "shopping_carts#index"
   resources :shopping_cart
+  get "orders", to: "orders#new", as: "new_order"
   resources :orders
   get 'products/index', to: "products#index"
   resources :products

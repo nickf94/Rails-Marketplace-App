@@ -1,0 +1,11 @@
+<p class="product-item">
+  <%= number_to_currency @poduct.price %>
+</p>
+
+
+<% if @product.price %>
+<p class="list-item">
+  <%= number_to_currency @product.price %>
+  <%= link_to "Buy now", new_order_path(product_id: @product_id) %>
+</p>
+<% end %>

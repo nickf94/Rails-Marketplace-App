@@ -14,7 +14,20 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
-    @order = Order.new
+    @product = Product.find(params[:product_id])
+    Stripe.api_key = 'sk_test_x0726HmAcAWTa1au6c4UO9qH00jk1E452W'
+    @session = Stripe::Checkout::Session.create(
+      payment_method_types: ['card'],
+      line_items: [(
+        name: @product.name,
+        description: "#{@product.description}",
+        amount: (@product.price * 100).to_i,
+        currency: 'aud',
+        quantity: 1,
+        )],
+        success_url: 'http://localhost:3000/orders/complete',
+        cancel_url: 'http://localhost:3000/orders/cancel',
+      )
   end
 
   # GET /orders/1/edit

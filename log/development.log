@@ -10925,3 +10925,656 @@ These autoloaded constants have been unloaded.
 
 Please, check the "Autoloading and Reloading Constants" guide for solutions.
  (called from instance_exec at /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/initializable.rb:32)
+Started GET "/" for ::1 at 2019-11-06 14:12:16 +1000
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/_navbar.html.erb (Duration: 2.8ms | Allocations: 419)
+  Rendered pages/_form.html.erb (Duration: 2.4ms | Allocations: 300)
+  Rendered pages/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1257)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 1.1ms | Allocations: 24561)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bulma.
+Load paths:
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/config
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/images
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/javascripts
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/stylesheets
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/cloudinary-1.12.0/vendor/assets/html
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/cloudinary-1.12.0/vendor/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/actioncable-6.0.0/app/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/activestorage-6.0.0/app/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/actionview-6.0.0/lib/assets/compiled
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/node_modules):
+     8:     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     9:     <meta name="description" content="My portfolio"/>
+    10:     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    11:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    13:     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    14:     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  
+app/assets/stylesheets/application.css.scss:60
+app/views/layouts/application.html.erb:11
+Started GET "/" for ::1 at 2019-11-06 14:13:13 +1000
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/_navbar.html.erb (Duration: 0.6ms | Allocations: 198)
+  Rendered pages/_form.html.erb (Duration: 0.4ms | Allocations: 26)
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 360)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms | Allocations: 7105)
+
+
+  
+ActionView::Template::Error (Invalid CSS after " body ": expected selector or at-rule, was "{"):
+     8:     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     9:     <meta name="description" content="My portfolio"/>
+    10:     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    11:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    13:     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    14:     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  
+app/assets/stylesheets/application.css.scss:19
+app/views/layouts/application.html.erb:11
+Started GET "/" for ::1 at 2019-11-06 14:13:35 +1000
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/_navbar.html.erb (Duration: 0.6ms | Allocations: 188)
+  Rendered pages/_form.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 351)
+Completed 200 OK in 96ms (Views: 90.2ms | ActiveRecord: 0.7ms | Allocations: 31227)
+
+
+Started GET "/" for ::1 at 2019-11-06 14:14:03 +1000
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/_navbar.html.erb (Duration: 0.6ms | Allocations: 188)
+  Rendered pages/_form.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 351)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 1.5ms | Allocations: 16985)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bulma.
+Load paths:
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/config
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/images
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/javascripts
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/stylesheets
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/cloudinary-1.12.0/vendor/assets/html
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/cloudinary-1.12.0/vendor/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/actioncable-6.0.0/app/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/activestorage-6.0.0/app/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/actionview-6.0.0/lib/assets/compiled
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/node_modules):
+     8:     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     9:     <meta name="description" content="My portfolio"/>
+    10:     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    11:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    13:     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    14:     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  
+app/assets/stylesheets/application.css.scss:60
+app/views/layouts/application.html.erb:11
+Started GET "/" for ::1 at 2019-11-06 14:16:18 +1000
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/_navbar.html.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered pages/_form.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 350)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.8ms | Allocations: 5227)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bulma' with type 'text/css'
+Checked in these paths: 
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/config
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/images
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/javascripts
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/stylesheets
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/cloudinary-1.12.0/vendor/assets/html
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/cloudinary-1.12.0/vendor/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/actioncable-6.0.0/app/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/activestorage-6.0.0/app/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/actionview-6.0.0/lib/assets/compiled
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/node_modules):
+     8:     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     9:     <meta name="description" content="My portfolio"/>
+    10:     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    11:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    13:     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    14:     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  
+app/assets/stylesheets/application.css.scss:13
+app/views/layouts/application.html.erb:11
+Started GET "/" for ::1 at 2019-11-06 14:16:51 +1000
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/_navbar.html.erb (Duration: 0.5ms | Allocations: 188)
+  Rendered pages/_form.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 350)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.8ms | Allocations: 5226)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bulma-rails' with type 'text/css'
+Checked in these paths: 
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/config
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/images
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/javascripts
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/stylesheets
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/cloudinary-1.12.0/vendor/assets/html
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/cloudinary-1.12.0/vendor/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/actioncable-6.0.0/app/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/activestorage-6.0.0/app/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/actionview-6.0.0/lib/assets/compiled
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/node_modules):
+     8:     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     9:     <meta name="description" content="My portfolio"/>
+    10:     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    11:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    13:     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    14:     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  
+app/assets/stylesheets/application.css.scss:13
+app/views/layouts/application.html.erb:11
+Started GET "/" for ::1 at 2019-11-06 14:17:05 +1000
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/_navbar.html.erb (Duration: 0.6ms | Allocations: 188)
+  Rendered pages/_form.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 350)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.7ms | Allocations: 5226)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bulma_rails' with type 'text/css'
+Checked in these paths: 
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/config
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/images
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/javascripts
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/stylesheets
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/cloudinary-1.12.0/vendor/assets/html
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/cloudinary-1.12.0/vendor/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/actioncable-6.0.0/app/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/activestorage-6.0.0/app/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/actionview-6.0.0/lib/assets/compiled
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/node_modules):
+     8:     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     9:     <meta name="description" content="My portfolio"/>
+    10:     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    11:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    13:     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    14:     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  
+app/assets/stylesheets/application.css.scss:13
+app/views/layouts/application.html.erb:11
+Started GET "/" for ::1 at 2019-11-06 14:17:24 +1000
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/_navbar.html.erb (Duration: 0.7ms | Allocations: 188)
+  Rendered pages/_form.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 350)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.7ms | Allocations: 13427)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bulma.
+Load paths:
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/config
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/images
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/javascripts
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/assets/stylesheets
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/cloudinary-1.12.0/vendor/assets/html
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/cloudinary-1.12.0/vendor/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/actioncable-6.0.0/app/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/activestorage-6.0.0/app/assets/javascripts
+  /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/actionview-6.0.0/lib/assets/compiled
+  /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/node_modules):
+     8:     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     9:     <meta name="description" content="My portfolio"/>
+    10:     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    11:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    13:     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    14:     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  
+app/assets/stylesheets/application.css.scss:60
+app/views/layouts/application.html.erb:11
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from instance_exec at /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/initializable.rb:32)
+Started GET "/" for ::1 at 2019-11-06 14:18:33 +1000
+  [1m[35m (8.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/_navbar.html.erb (Duration: 2.4ms | Allocations: 454)
+  Rendered pages/_form.html.erb (Duration: 1.7ms | Allocations: 305)
+  Rendered pages/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 1424)
+Completed 200 OK in 7090ms (Views: 7038.0ms | ActiveRecord: 7.1ms | Allocations: 2849399)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-06 14:19:38 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zWJThIkhm/idY1jNsokFFB9LM0UMNB+FyqWqkOl3RLO4Itn4eXRNMLu03uU5gBAvFJUzXR65O6/xqTtG9hezkA=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 0.6ms | Allocations: 4487)
+
+
+Started GET "/" for ::1 at 2019-11-06 14:19:38 +1000
+Processing by PagesController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms | Allocations: 323)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-11-06 14:19:38 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 616)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.9ms | Allocations: 2857)
+Completed 200 OK in 137ms (Views: 131.0ms | ActiveRecord: 0.0ms | Allocations: 24870)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-11-06 14:19:49 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"j0/HoUlX5zgJVXSN+ckuwPsaJ5nmUQptGb9RXU0CaudlN5Z46ZAj1wyFqzfnCJ5qKeyggas9JfT7354PsnB7Lg==", "user"=>{"email"=>"nickfletcher720@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nickfletcher720@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 10ms (ActiveRecord: 1.0ms | Allocations: 1976)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"j0/HoUlX5zgJVXSN+ckuwPsaJ5nmUQptGb9RXU0CaudlN5Z46ZAj1wyFqzfnCJ5qKeyggas9JfT7354PsnB7Lg==", "user"=>{"email"=>"nickfletcher720@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 132)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1048)
+Completed 200 OK in 186ms (Views: 32.9ms | ActiveRecord: 0.0ms | Allocations: 22207)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-06 14:19:53 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.3ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 123)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 1845)
+Completed 200 OK in 65ms (Views: 62.7ms | ActiveRecord: 0.0ms | Allocations: 23204)
+
+
+Started POST "/users" for ::1 at 2019-11-06 14:20:03 +1000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"mIL02i8O1lN9tMSa1jmQqKrAQWIy5w9qDjpL0Fa1gw1aOaxfN9JwxGMng3/Q++zVBvJx5f19NSwxyHiq7hFYOQ==", "user"=>{"email"=>"nickfletcher720@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nickfletcher720@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "nickfletcher720@gmail.com"], ["encrypted_password", "$2a$11$kit5eLxn7MvO64hopUngXuEOFmw9LivV3C1oNRAuMhA1b3CfmHcN6"], ["created_at", "2019-11-06 04:20:03.958560"], ["updated_at", "2019-11-06 04:20:03.958560"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 172ms (ActiveRecord: 4.8ms | Allocations: 8564)
+
+
+Started GET "/" for ::1 at 2019-11-06 14:20:04 +1000
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/_navbar.html.erb (Duration: 0.8ms | Allocations: 198)
+  Rendered pages/_form.html.erb (Duration: 1.2ms | Allocations: 26)
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 360)
+Completed 200 OK in 52ms (Views: 47.9ms | ActiveRecord: 0.4ms | Allocations: 22250)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRole Load (18.2ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."name" = $1 AND "roles"."resource_type" IS NULL AND "roles"."resource_id" IS NULL ORDER BY "roles"."id" ASC LIMIT $2[0m  [["name", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Create (2.5ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "admin"], ["created_at", "2019-11-06 04:20:57.337978"], ["updated_at", "2019-11-06 04:20:57.337978"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRole Exists? (15.2ms)[0m  [1m[34mSELECT 1 AS one FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 AND "roles"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "roles"."id" FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mRole Load (0.6ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[36mRole Load (0.7ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser::HABTM_Roles Create (0.9ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 2], ["role_id", 1]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from instance_exec at /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/initializable.rb:32)
+Started GET "/" for ::1 at 2019-11-06 14:28:03 +1000
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/_navbar.html.erb (Duration: 0.5ms | Allocations: 204)
+  Rendered pages/_form.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 366)
+Completed 200 OK in 75ms (Views: 57.0ms | ActiveRecord: 2.1ms | Allocations: 27974)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from instance_exec at /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/initializable.rb:32)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from instance_exec at /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/initializable.rb:32)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from instance_exec at /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/initializable.rb:32)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from instance_exec at /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/initializable.rb:32)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from instance_exec at /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/initializable.rb:32)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from instance_exec at /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/initializable.rb:32)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from instance_exec at /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/initializable.rb:32)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from instance_exec at /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/initializable.rb:32)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from instance_exec at /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/initializable.rb:32)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from instance_exec at /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/initializable.rb:32)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from instance_exec at /Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/initializable.rb:32)
+Started GET "/" for ::1 at 2019-11-06 15:17:36 +1000
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/_navbar.html.erb (Duration: 3.0ms | Allocations: 419)
+  Rendered pages/_form.html.erb (Duration: 2.0ms | Allocations: 300)
+  Rendered pages/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1257)
+Completed 200 OK in 109ms (Views: 75.6ms | ActiveRecord: 2.6ms | Allocations: 29751)
+
+
+Started GET "/products/index" for ::1 at 2019-11-06 15:19:02 +1000
+  
+SyntaxError (/Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/SRC/app/controllers/products_controller.rb:86: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/products_controller.rb:86: syntax error, unexpected end, expecting end-of-input
+app/controllers/products_controller.rb:86: syntax error, unexpected end, expecting end-of-input
+app/controllers/products_controller.rb:86: syntax error, unexpected end, expecting end-of-input
+Started GET "/products/index" for ::1 at 2019-11-06 15:20:14 +1000
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 380ms (ActiveRecord: 58.8ms | Allocations: 64517)
+
+
+  
+NoMethodError (undefined method `admin_only' for #<ProductsController:0x00007fb4103cf7c8>):
+  
+activesupport (6.0.0) lib/active_support/callbacks.rb:429:in `block in make_lambda'
+activesupport (6.0.0) lib/active_support/callbacks.rb:201:in `block (2 levels) in halting'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.0) lib/active_support/callbacks.rb:202:in `block in halting'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `block in invoke_before'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `each'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `invoke_before'
+activesupport (6.0.0) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/products/index" for ::1 at 2019-11-06 15:20:30 +1000
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/_navbar.html.erb (Duration: 2.7ms | Allocations: 432)
+  Rendered products/_products-form.html.erb (Duration: 0.8ms | Allocations: 256)
+  Rendered products/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1221)
+Completed 200 OK in 92ms (Views: 71.2ms | ActiveRecord: 4.4ms | Allocations: 30167)
+
+
+Started GET "/shopping_carts/index" for ::1 at 2019-11-06 15:20:44 +1000
+Processing by ShoppingCartsController#index as HTML
+  Rendering shopping_carts/index.html.erb within layouts/application
+  Rendered shopping_carts/_navbar.html.erb (Duration: 3.8ms | Allocations: 416)
+  Rendered shopping_carts/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 799)
+Completed 200 OK in 56ms (Views: 51.2ms | ActiveRecord: 0.0ms | Allocations: 22187)
+
+
+Started GET "/action_page.php?firstname=&email=&address=&city=&state=&zip=&cardname=&cardnumber=&expmonth=&expyear=&cvv=&sameadr=on" for ::1 at 2019-11-06 15:20:48 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/action_page.php"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
