@@ -6,9 +6,9 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
-Cloudinary:
+cloudinary:
   service: Cloudinary
-  cloud name: nickfis
+  cloud_name: nickfis
   api_key: 514452994947154
   api_secret: P3KZ5SQDCxVpbicOBFjSS0ytjGQ
 
