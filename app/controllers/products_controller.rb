@@ -2,15 +2,19 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+
+
   # GET /products
   # GET /products.json
   def index
     @products = Product.all
+    @user = User.all
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+     @product = Product.find params[:id]
   end
 
   # GET /products/new
@@ -25,23 +29,20 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    product = Product.create_product(params[:product][:name], description, params[:product][:description], params[:product][:price])
-    @product = Product.new(product_params)
-    @product.name = name
-    @product.cover.attach(params[:product][:cover])
-
-    if @product.save
-      ProductListItem.create_product_list_item(current_user, @product)
-      redirect_to product_list_items_path
-    else
-      render "new"
-    end
-  end
+     @product = Product.new(product_params)
+     if @product.save
+       flash[:alert] = "Your book has been saved"
+       redirect_to root_path
+     else
+       flash[:alert] = @product.errors.full_messages.join('<br>')
+       redirect_to new_product_path
+     end
+   end
 
   def self.create_product(name, description, price)
-    book = Book.find_product(name, description, price)
+    product= Product.find_product(title, description, price)
     if (!product)
-      product = Product.new(name: name, description: description, price: price)
+      product = Product.new(title: name, description: description, price: price)
       product.save
     else
     return product
@@ -78,8 +79,9 @@ class ProductsController < ApplicationController
       @product = Product.find(params[:id])
     end
 
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:description, :price)
+      params.require(:product).permit(:name, :description, :price)
     end
 end

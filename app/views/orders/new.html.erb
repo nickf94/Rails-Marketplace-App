@@ -1,25 +1,10 @@
-<script src="https://js.stripe.com/v3/"></script>
+<h1>Your Order</h1>
 
-<script>
-var stripe = Stripe('pk_test_rXGWa2yhClYJ9dJ7o2V8rd9H00Z4NBPYTF');
-stripe.redirectToCheckout({
-sessionId: '<%= @session.id %>'
-}).then(function (result) {
-// If `redirectToCheckout` fails due to a browser or network
-// error, display the localized error message to your customer
-// using `result.error.message`.
-});
-</script>
-
-
-<h1 class="list-item">
-  Your order
-</h1>
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Author</th>
+      <th>Name</th>
+      <th>Description</th>
       <th>Price</th>
     </tr>
   </thead>
@@ -31,4 +16,19 @@ sessionId: '<%= @session.id %>'
     </tr>
   </tbody>
 </table>
-<button id="pay-now">Checkout now</button>
+
+<button id="checkout">Checkout Now</button>
+
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+  let stripe = Stripe("pk_test_rXGWa2yhClYJ9dJ7o2V8rd9H00Z4NBPYTF");
+  function checkout() {
+    stripe
+      .redirectToCheckout({
+        sessionId: "<%= @session.id %>"
+      })
+      .then(result => alert(result));
+  }
+  document.querySelector("#checkout").addEventListener("click", checkout)
+</script>
