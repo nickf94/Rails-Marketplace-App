@@ -31,7 +31,7 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
      @product = Product.new(product_params)
-     @product.image.attach(product_params[:image])
+     @product.image.attach(image_params[:image])
      @product.user = current_user
      if @product.save
        flash[:alert] = "Your product has been saved"
@@ -87,6 +87,10 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :image, :price)
+      params.require(:product).permit(:name, :description, :price)
+    end
+
+    def image_params
+      params.require(:product).permit(:image)
     end
 end
