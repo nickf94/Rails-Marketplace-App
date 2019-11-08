@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-products = Product.create ([{name: 'Motorbike Gloves', price: $59, Description: "Theses gloves will fit your hands perfectly and allow for a comfortable ride"},
-  {name: 'Bar End Mirrors', price: $120, Description: "Be the talk of the town with these bar end mirrors, make your bike stand out in a crowd"}])
+products = Product.create ([{name: 'Motorbike Gloves', price: $59, description: "Theses gloves will fit your hands perfectly and allow for a comfortable ride"},
+  {name: 'Bar End Mirrors', price: $120, description: "Be the talk of the town with these bar end mirrors, make your bike stand out in a crowd"}])
