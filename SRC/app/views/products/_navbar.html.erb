@@ -15,7 +15,7 @@
           <%= link_to '<i class="fas fa-sign-in-alt"></i>'.html_safe, new_user_session_path, class: "button is-info is-rounded" %>
         </div>
         <div class="column is-one-quarter">
-          <%= link_to '<i class="fas fa-shopping-cart"></i>'.html_safe, shopping_carts_index_path, class: "button is-link is-rounded" %>
+          <%= link_to '<i class="fas fa-shopping-cart"></i>'.html_safe, new_order_path, class: "button is-link is-rounded" %>
         </div>
         <div class="column is-one-quarter">
           <%=link_to '<i class="fas fa-sign-out-alt"></i>'.html_safe, destroy_user_session_path, method: 'delete', class: "button is-warning is-rounded" %>

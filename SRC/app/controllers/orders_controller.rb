@@ -1,3 +1,5 @@
+require "stripe"
+
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
@@ -14,20 +16,20 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
-    @product = Product.find(params[:product_id])
-    Stripe.api_key = 'sk_test_x0726HmAcAWTa1au6c4UO9qH00jk1E452W'
-    @session = Stripe::Checkout::Session.create(
-      payment_method_types: ['card'],
-      line_items: [(
-        name: @product.name,
-        description: "#{@product.description}",
-        amount: (@product.price * 100).to_i,
-        currency: 'aud',
-        quantity: 1,
-        )],
-        success_url: 'http://localhost:3000/orders/complete',
-        cancel_url: 'http://localhost:3000/orders/cancel',
-      )
+    @order = Order.find(params[:product_id])
+    Stripe.api_key = "sk_test_x0726HmAcAWTa1au6c4UO9qH00jk1E452W"
+      @session = Stripe::Checkout::Session.create(
+        payment_method_types: ["card"],
+        line_items: [{
+          name: @product.name,
+          description: "By #{@product.description}",
+          # images: [],
+          amount: (@product.price * 100).to_i,
+          currency: "aud",
+          quantity: 1,
+        }],
+        success_url: "http://localhost:3000/orders/complete",
+        cancel_url: "http://localhost:3000/orders/cancel",
   end
 
   # GET /orders/1/edit
@@ -73,6 +75,15 @@ class OrdersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def complete
+    render html: "<h2>Thanks for your order!</h2>".html_safe
+  end
+
+  def cancel
+    render html: "<h2>Your order was cancelled</h2>".html_safe
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
