@@ -16,9 +16,10 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
-    @order = Order.find(params[:product_id])
+    @product = Product.find(params[:product_id])
     Stripe.api_key = "sk_test_x0726HmAcAWTa1au6c4UO9qH00jk1E452W"
-      @session = Stripe::Checkout::Session.create(
+
+    @session = Stripe::Checkout::Session.create(
         payment_method_types: ["card"],
         line_items: [{
           name: @product.name,
@@ -29,8 +30,8 @@ class OrdersController < ApplicationController
           quantity: 1,
         }],
         success_url: "http://localhost:3000/orders/complete",
-        cancel_url: "http://localhost:3000/orders/cancel",
-  end
+        cancel_url: "http://localhost:3000/orders/cancel")
+      end
 
   # GET /orders/1/edit
   def edit
@@ -77,13 +78,10 @@ class OrdersController < ApplicationController
   end
 
   def complete
-    render html: "<h2>Thanks for your order!</h2>".html_safe
   end
 
   def cancel
-    render html: "<h2>Your order was cancelled</h2>".html_safe
   end
-
 
   private
     # Use callbacks to share common setup or constraints between actions.

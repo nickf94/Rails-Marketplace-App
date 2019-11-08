@@ -22,7 +22,7 @@
       <tr>
         <td>
           <figure class="image is-square">
-            <%= product.cover.attached? ? image_tag(product.image) : '' %>
+            <%= product.image.attached? ? image_tag(product.image) : '' %>
           </figure>
         </td>
         <td><%= product.name %></td>

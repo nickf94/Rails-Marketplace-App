@@ -21,6 +21,11 @@
    background-size: cover;
  }
 
+ button {
+   color: white;
+ }
+
+
  .container {
    font-family: 'Indie Flower', cursive;
    font-size: 24px;
@@ -30,11 +35,11 @@
    text-align: center;
    .title {
      font-family: 'Indie Flower', cursive;
-     color: #0063B0;
+     color: red;
    }
    .subtitle {
      font-family: 'Indie Flower', cursive;
-     color: #0063B0;
+     color: red;
    }
  }
 

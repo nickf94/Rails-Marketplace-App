@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :authorise, only: [:create, :edit, :update, :destroy]
 
 
 
@@ -30,8 +31,10 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
      @product = Product.new(product_params)
+     @product.image.attach(product_params[:image])
+     @product.user = current_user
      if @product.save
-       flash[:alert] = "Your book has been saved"
+       flash[:alert] = "Your product has been saved"
        redirect_to root_path
      else
        flash[:alert] = @product.errors.full_messages.join('<br>')
@@ -79,9 +82,11 @@ class ProductsController < ApplicationController
       @product = Product.find(params[:id])
     end
 
+    def authorise
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :price)
+      params.require(:product).permit(:name, :description, :image, :price)
     end
 end
