@@ -62,5 +62,5 @@ gem "cloudinary", "~> 1.12"
 gem "activestorage-cloudinary-service", "~> 0.2.3"
 
 gem "bulma-rails", "~> 0.8.0"
-gem 'cancancan', '~> 1.10'
+
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
