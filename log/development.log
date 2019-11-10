@@ -33837,3 +33837,44 @@ Processing by ProductsController#show as HTML
 Completed 200 OK in 59ms (Views: 49.9ms | ActiveRecord: 2.0ms | Allocations: 27139)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/Rails-Marketplace-App/src/config/environment.rb:5)
+Started GET "/products/1" for ::1 at 2019-11-11 09:31:12 +1000
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:83:in `set_product'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:18:in `show'
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:9
+DEPRECATION WARNING: ActionView::Base instances should be constructed with a lookup context, assignments, and a controller. (called from _app_views_products_show_html_erb___4332235655474664453_70299423006360 at /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/Rails-Marketplace-App/src/app/views/products/show.html.erb:9)
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:9
+  Rendered products/show.html.erb within layouts/application (Duration: 107.2ms | Allocations: 22578)
+Completed 200 OK in 791ms (Views: 715.7ms | ActiveRecord: 22.2ms | Allocations: 357938)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4eb60613c15066d7b8fcf9a9051d705141184a17/59272880995__EB088359-2C35-43EB-B27B-37013AF2F60C.jpg" for ::1 at 2019-11-11 09:31:13 +1000
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4eb60613c15066d7b8fcf9a9051d705141184a17", "filename"=>"59272880995__EB088359-2C35-43EB-B27B-37013AF2F60C"}
+  [1m[36mActiveStorage::Blob Load (3.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Cloudinary Storage (28.7ms) [0m[34mGenerated URL for file at key: hd33f071p58bzxltvfjferhkymus (http://res.cloudinary.com/nickfis/image/upload/hd33f071p58bzxltvfjferhkymus.jpg)[0m
+Redirected to http://res.cloudinary.com/nickfis/image/upload/hd33f071p58bzxltvfjferhkymus.jpg
+Completed 302 Found in 45ms (ActiveRecord: 3.3ms | Allocations: 4209)
+
+
