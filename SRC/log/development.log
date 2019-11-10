@@ -33422,3 +33422,418 @@ FOREIGN KEY ("user_id")
   [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "8596bc547c0377204d7d2cc3c197b9fb0b42f492"], ["created_at", "2019-11-09 10:17:26.428183"], ["updated_at", "2019-11-09 10:17:26.428183"]]
   [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/Rails-Marketplace-App/src/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/Rails-Marketplace-App/src/config/environment.rb:5)
+Started GET "/" for ::1 at 2019-11-11 09:15:22 +1000
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+Completed 401 Unauthorized in 68ms (ActiveRecord: 0.0ms | Allocations: 1112)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-11-11 09:15:23 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 5.6ms | Allocations: 623)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 48.1ms | Allocations: 4140)
+Completed 200 OK in 5093ms (Views: 5022.5ms | ActiveRecord: 38.2ms | Allocations: 2143388)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-11-11 09:15:38 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"pD3VbJdlTDrR3nICPIYKfMlpQzEHgc8unFmysjIlOjDOv9P7MATT6/pIyxvHPscCkISZGmFPK5GVQLzmBLSfvQ==", "user"=>{"email"=>"nickfletcher720@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nickfletcher720@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 28ms (ActiveRecord: 9.9ms | Allocations: 2871)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"pD3VbJdlTDrR3nICPIYKfMlpQzEHgc8unFmysjIlOjDOv9P7MATT6/pIyxvHPscCkISZGmFPK5GVQLzmBLSfvQ==", "user"=>{"email"=>"nickfletcher720@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1084)
+Completed 200 OK in 213ms (Views: 38.4ms | ActiveRecord: 0.0ms | Allocations: 22037)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-11 09:15:43 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 124)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 12.9ms | Allocations: 1878)
+Completed 200 OK in 93ms (Views: 90.3ms | ActiveRecord: 0.0ms | Allocations: 22947)
+
+
+Started POST "/users" for ::1 at 2019-11-11 09:15:55 +1000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"t9z5x/7c3WZ1o/zrldCutFHeDkjGvLIHF8jbfu7eKiZCOi7K5gJqF0qtDBO+a2CHsCfzZqlCaBaNiH9kGvqHDA==", "user"=>{"email"=>"nickfletcher720@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nickfletcher720@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (62.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "nickfletcher720@gmail.com"], ["encrypted_password", "$2a$11$fAuhVD4qvk6GjF08GbOtE.eqPGbKaMmmZSD/WJcaVS1xhVUX2MHT."], ["created_at", "2019-11-10 23:15:55.289666"], ["updated_at", "2019-11-10 23:15:55.289666"]]
+  [1m[36mRole Load (83.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:13:in `assign_default_role'
+  [1m[36mRole Load (1.1ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."name" = $1 AND "roles"."resource_type" IS NULL AND "roles"."resource_id" IS NULL ORDER BY "roles"."id" ASC LIMIT $2[0m  [["name", "user"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13:in `assign_default_role'
+  [1m[36mRole Create (24.5ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "user"], ["created_at", "2019-11-10 23:15:55.549057"], ["updated_at", "2019-11-10 23:15:55.549057"]]
+  ↳ app/models/user.rb:13:in `assign_default_role'
+  [1m[36mRole Load (4.5ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  ↳ app/models/user.rb:13:in `assign_default_role'
+  [1m[36mUser::HABTM_Roles Create (25.8ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 1], ["role_id", 1]]
+  ↳ app/models/user.rb:13:in `assign_default_role'
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 544ms (ActiveRecord: 228.1ms | Allocations: 32988)
+
+
+Started GET "/" for ::1 at 2019-11-11 09:15:55 +1000
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/_navbar.html.erb (Duration: 5.7ms | Allocations: 393)
+  Rendered pages/_form.html.erb (Duration: 1.8ms | Allocations: 237)
+  Rendered pages/index.html.erb within layouts/application (Duration: 16.4ms | Allocations: 1172)
+Completed 200 OK in 111ms (Views: 78.6ms | ActiveRecord: 0.6ms | Allocations: 23453)
+
+
+Started GET "/products/index" for ::1 at 2019-11-11 09:16:27 +1000
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/_navbar.html.erb (Duration: 2.5ms | Allocations: 377)
+  [1m[36mProduct Load (6.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:22
+  Rendered products/index.html.erb within layouts/application (Duration: 31.3ms | Allocations: 2045)
+Completed 200 OK in 173ms (Views: 130.6ms | ActiveRecord: 22.5ms | Allocations: 25813)
+
+
+Started GET "/products/new" for ::1 at 2019-11-11 09:16:29 +1000
+Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 8.7ms | Allocations: 1868)
+  Rendered products/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2211)
+Completed 200 OK in 57ms (Views: 37.4ms | ActiveRecord: 2.7ms | Allocations: 27776)
+
+
+Started POST "/products" for ::1 at 2019-11-11 09:16:56 +1000
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"ybtRPcRIRuoa2r6d25RCQ3/liuRzFgGMHN5ORArbDh6P/n9KUXcDCXoiFOHoRFXFgfaNW40uczIbd5UAdcy0cg==", "product"=>{"name"=>"Motorbike Gloves", "description"=>"Comfortable gloves made for use for the streets", "price"=>"70", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fa728b73640 @tempfile=#<Tempfile:/var/folders/b2/575_cf192s5_38cvctd0dz5m0000gn/T/RackMultipart20191111-47963-zb6bu4.jpg>, @original_filename="59272880995__EB088359-2C35-43EB-B27B-37013AF2F60C.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"59272880995__EB088359-2C35-43EB-B27B-37013AF2F60C.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Product"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :image[0m
+[31mUnpermitted parameters: :name, :description, :price[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:37:in `create'
+  [1m[36mProduct Create (31.8ms)[0m  [1m[32mINSERT INTO "products" ("description", "price", "created_at", "updated_at", "name", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "Comfortable gloves made for use for the streets"], ["price", "70.0"], ["created_at", "2019-11-10 23:16:56.460245"], ["updated_at", "2019-11-10 23:16:56.460245"], ["name", "Motorbike Gloves"], ["user_id", 1]]
+  ↳ app/controllers/products_controller.rb:37:in `create'
+DEPRECATION WARNING: ActionView::Base instances should be constructed with a lookup context, assignments, and a controller. (called from create at /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/Rails-Marketplace-App/src/app/controllers/products_controller.rb:37)
+  [1m[36mActiveStorage::Blob Load (3.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:37:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:37:in `create'
+  [1m[36mActiveStorage::Blob Create (1.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "hd33f071p58bzxltvfjferhkymus"], ["filename", "59272880995__EB088359-2C35-43EB-B27B-37013AF2F60C.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 5135048], ["checksum", "N0qz+wXv9VPsqT6mb3IMaA=="], ["created_at", "2019-11-10 23:16:56.668083"]]
+  ↳ app/controllers/products_controller.rb:37:in `create'
+  [1m[36mActiveStorage::Attachment Create (7.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 1], ["blob_id", 1], ["created_at", "2019-11-10 23:16:56.674957"]]
+  ↳ app/controllers/products_controller.rb:37:in `create'
+  [1m[36mProduct Update (36.1ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = $1 WHERE "products"."id" = $2[0m  [["updated_at", "2019-11-10 23:16:56.685815"], ["id", 1]]
+  ↳ app/controllers/products_controller.rb:37:in `create'
+  [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:37:in `create'
+[36m  Cloudinary Storage (11277.0ms) [0m[32mUploaded file to key: hd33f071p58bzxltvfjferhkymus (checksum: N0qz+wXv9VPsqT6mb3IMaA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 82876602-ce69-4e9c-abf5-c2e27811a447) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007fa72a8235b0 @uri=#<URI::GID gid://marketplace/ActiveStorage::Blob/1>>
+Completed 500 Internal Server Error in 12069ms (ActiveRecord: 137.1ms | Allocations: 321905)
+
+
+  [1m[36mActiveStorage::Blob Load (84.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [82876602-ce69-4e9c-abf5-c2e27811a447] Performing ActiveStorage::AnalyzeJob (Job ID: 82876602-ce69-4e9c-abf5-c2e27811a447) from Async(active_storage_analysis) enqueued at 2019-11-10T23:17:08Z with arguments: #<GlobalID:0x00007fa7266b6c30 @uri=#<URI::GID gid://marketplace/ActiveStorage::Blob/1>>
+  
+NameError (undefined local variable or method `product_index_path' for #<ProductsController:0x00007fa728b54e48>
+Did you mean?  products_index_path
+               products_index_url):
+  
+app/controllers/products_controller.rb:39:in `create'
+[ActiveJob] [ActiveStorage::AnalyzeJob] [82876602-ce69-4e9c-abf5-c2e27811a447] Error performing ActiveStorage::AnalyzeJob (Job ID: 82876602-ce69-4e9c-abf5-c2e27811a447) from Async(active_storage_analysis) in 10.15ms: CloudinaryException (Must supply cloud_name in tag or in configuration):
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/cloudinary-1.12.0/lib/cloudinary/utils.rb:484:in `unsigned_download_url'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/cloudinary-1.12.0/lib/active_storage/service/cloudinary_service.rb:101:in `download'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/lib/active_storage/downloader.rb:32:in `download'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/lib/active_storage/downloader.rb:13:in `block in open'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/lib/active_storage/downloader.rb:24:in `open_tempfile'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/lib/active_storage/downloader.rb:12:in `open'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/lib/active_storage/service.rb:86:in `open'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/app/models/active_storage/blob.rb:217:in `open'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/lib/active_storage/analyzer.rb:27:in `download_blob_to_tempfile'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/lib/active_storage/analyzer/image_analyzer.rb:32:in `read_image'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/lib/active_storage/analyzer/image_analyzer.rb:21:in `metadata'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/app/models/active_storage/blob/analyzable.rb:47:in `extract_metadata_via_analyzer'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/app/models/active_storage/blob/analyzable.rb:29:in `analyze'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/app/jobs/active_storage/analyze_job.rb:11:in `perform'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/notifications.rb:180:in `block in instrument'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/notifications.rb:180:in `instrument'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/logging.rb:45:in `block in tag_logger'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/tagged_logging.rb:80:in `tagged'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/logging.rb:45:in `tag_logger'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/execution.rb:38:in `perform_now'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/execution.rb:24:in `block in execute'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/railtie.rb:43:in `block (4 levels) in <class:Railtie>'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/reloader.rb:72:in `block in wrap'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/reloader.rb:71:in `wrap'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/railtie.rb:42:in `block (3 levels) in <class:Railtie>'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/execution.rb:22:in `execute'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+Started POST "/products" for ::1 at 2019-11-11 09:17:46 +1000
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"ybtRPcRIRuoa2r6d25RCQ3/liuRzFgGMHN5ORArbDh6P/n9KUXcDCXoiFOHoRFXFgfaNW40uczIbd5UAdcy0cg==", "product"=>{"name"=>"Motorbike Gloves", "description"=>"Comfortable gloves made for use for the streets", "price"=>"70", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fa72b0e4078 @tempfile=#<Tempfile:/var/folders/b2/575_cf192s5_38cvctd0dz5m0000gn/T/RackMultipart20191111-47963-13kdl1i.jpg>, @original_filename="59272880995__EB088359-2C35-43EB-B27B-37013AF2F60C.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"59272880995__EB088359-2C35-43EB-B27B-37013AF2F60C.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Product"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :image[0m
+[31mUnpermitted parameters: :name, :description, :price[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:37:in `create'
+  [1m[36mProduct Create (1.5ms)[0m  [1m[32mINSERT INTO "products" ("description", "price", "created_at", "updated_at", "name", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "Comfortable gloves made for use for the streets"], ["price", "70.0"], ["created_at", "2019-11-10 23:17:46.644368"], ["updated_at", "2019-11-10 23:17:46.644368"], ["name", "Motorbike Gloves"], ["user_id", 1]]
+  ↳ app/controllers/products_controller.rb:37:in `create'
+DEPRECATION WARNING: ActionView::Base instances should be constructed with a lookup context, assignments, and a controller. (called from create at /Users/nickfletcher/Desktop/projects/rails/NickFletcher_T2A2/Rails-Marketplace-App/src/app/controllers/products_controller.rb:37)
+  [1m[36mActiveStorage::Blob Load (2.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:37:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:37:in `create'
+  [1m[36mActiveStorage::Blob Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "wudlqmqip3lw4b91yo49yz0w0aj7"], ["filename", "59272880995__EB088359-2C35-43EB-B27B-37013AF2F60C.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 5135048], ["checksum", "N0qz+wXv9VPsqT6mb3IMaA=="], ["created_at", "2019-11-10 23:17:46.814605"]]
+  ↳ app/controllers/products_controller.rb:37:in `create'
+  [1m[36mActiveStorage::Attachment Create (1.0ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 2], ["blob_id", 2], ["created_at", "2019-11-10 23:17:46.820035"]]
+  ↳ app/controllers/products_controller.rb:37:in `create'
+  [1m[36mProduct Update (1.0ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = $1 WHERE "products"."id" = $2[0m  [["updated_at", "2019-11-10 23:17:46.823646"], ["id", 2]]
+  ↳ app/controllers/products_controller.rb:37:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:37:in `create'
+[36m  Cloudinary Storage (19968.1ms) [0m[32mUploaded file to key: wudlqmqip3lw4b91yo49yz0w0aj7 (checksum: N0qz+wXv9VPsqT6mb3IMaA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 9a946041-5fc6-48db-89a2-999eb66a4f30) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007fa72734d020 @uri=#<URI::GID gid://marketplace/ActiveStorage::Blob/2>>
+Redirected to http://localhost:3000/
+Completed 302 Found in 20231ms (ActiveRecord: 71.9ms | Allocations: 43879)
+
+
+Started GET "/" for ::1 at 2019-11-11 09:18:06 +1000
+DEPRECATION WARNING: ActionView::Base instances should be constructed with a lookup context, assignments, and a controller. (called from model_class at /Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/globalid-0.4.2/lib/global_id/global_id.rb:60)
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/_navbar.html.erb (Duration: 0.3ms | Allocations: 194)
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/_form.html.erb (Duration: 0.1ms | Allocations: 27)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9a946041-5fc6-48db-89a2-999eb66a4f30] Performing ActiveStorage::AnalyzeJob (Job ID: 9a946041-5fc6-48db-89a2-999eb66a4f30) from Async(active_storage_analysis) enqueued at 2019-11-10T23:18:06Z with arguments: #<GlobalID:0x00007fa727670b80 @uri=#<URI::GID gid://marketplace/ActiveStorage::Blob/2>>
+  Rendered pages/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 5691)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9a946041-5fc6-48db-89a2-999eb66a4f30] Error performing ActiveStorage::AnalyzeJob (Job ID: 9a946041-5fc6-48db-89a2-999eb66a4f30) from Async(active_storage_analysis) in 1.75ms: CloudinaryException (Must supply cloud_name in tag or in configuration):
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/cloudinary-1.12.0/lib/cloudinary/utils.rb:484:in `unsigned_download_url'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/cloudinary-1.12.0/lib/active_storage/service/cloudinary_service.rb:101:in `download'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/lib/active_storage/downloader.rb:32:in `download'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/lib/active_storage/downloader.rb:13:in `block in open'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/lib/active_storage/downloader.rb:24:in `open_tempfile'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/lib/active_storage/downloader.rb:12:in `open'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/lib/active_storage/service.rb:86:in `open'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/app/models/active_storage/blob.rb:217:in `open'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/lib/active_storage/analyzer.rb:27:in `download_blob_to_tempfile'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/lib/active_storage/analyzer/image_analyzer.rb:32:in `read_image'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/lib/active_storage/analyzer/image_analyzer.rb:21:in `metadata'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/app/models/active_storage/blob/analyzable.rb:47:in `extract_metadata_via_analyzer'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/app/models/active_storage/blob/analyzable.rb:29:in `analyze'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activestorage-6.0.1/app/jobs/active_storage/analyze_job.rb:11:in `perform'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/notifications.rb:180:in `block in instrument'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/notifications.rb:180:in `instrument'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/logging.rb:45:in `block in tag_logger'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/tagged_logging.rb:80:in `tagged'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/logging.rb:45:in `tag_logger'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/execution.rb:38:in `perform_now'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/execution.rb:24:in `block in execute'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/railtie.rb:43:in `block (4 levels) in <class:Railtie>'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/reloader.rb:72:in `block in wrap'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/reloader.rb:71:in `wrap'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/railtie.rb:42:in `block (3 levels) in <class:Railtie>'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activesupport-6.0.1/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/execution.rb:22:in `execute'
+/Users/nickfletcher/.rvm/gems/ruby-2.6.4/gems/activejob-6.0.1/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/nickfletcher/.rvm/rubies/ruby-2.6.4/lib/ruby/gems/2.6.0/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+Completed 200 OK in 58ms (Views: 41.9ms | ActiveRecord: 5.1ms | Allocations: 34699)
+
+
+Started GET "/products/index" for ::1 at 2019-11-11 09:18:10 +1000
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/_navbar.html.erb (Duration: 0.3ms | Allocations: 181)
+  [1m[36mProduct Load (12.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:22
+  Rendered products/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 6427)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 18.3ms | Allocations: 9602)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    23:       <tr>
+    24:         <td>
+    25:           <figure class="image is-square">
+    26:             <%= @product.image.attached? ? image_tag(product.image) : '' %>
+    27:           </figure>
+    28:         </td>
+    29:         <td><%= @product.name %></td>
+  
+app/views/products/index.html.erb:26
+app/views/products/index.html.erb:22
+Started GET "/products/index" for ::1 at 2019-11-11 09:19:28 +1000
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/_navbar.html.erb (Duration: 3.1ms | Allocations: 373)
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:22
+  [1m[36mActiveStorage::Attachment Load (6.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:26
+  Rendered products/index.html.erb within layouts/application (Duration: 43.8ms | Allocations: 13999)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 12.4ms | Allocations: 16739)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    26:             <%= product.image.attached? ? image_tag(product.image) : '' %>
+    27:           </figure>
+    28:         </td>
+    29:         <td><%= @product.name %></td>
+    30:         <td><%= @product.description %></td>
+    31:         <td><%= @product.price %></td>
+    32:         <td><%= link_to 'Show', product, class: "button is-small is-primary is-outlined is-rounded" %></td>
+  
+app/views/products/index.html.erb:29
+app/views/products/index.html.erb:22
+Started GET "/products/index" for ::1 at 2019-11-11 09:19:52 +1000
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/_navbar.html.erb (Duration: 0.7ms | Allocations: 373)
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:22
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:26
+  Rendered products/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 5831)
+Completed 200 OK in 46ms (Views: 38.9ms | ActiveRecord: 3.6ms | Allocations: 28489)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4eb60613c15066d7b8fcf9a9051d705141184a17/59272880995__EB088359-2C35-43EB-B27B-37013AF2F60C.jpg" for ::1 at 2019-11-11 09:19:52 +1000
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--59bac1021b756df01cb1e03a76b3880ceb064530/59272880995__EB088359-2C35-43EB-B27B-37013AF2F60C.jpg" for ::1 at 2019-11-11 09:19:52 +1000
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4eb60613c15066d7b8fcf9a9051d705141184a17", "filename"=>"59272880995__EB088359-2C35-43EB-B27B-37013AF2F60C"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  [1m[36mActiveStorage::Blob Load (5.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--59bac1021b756df01cb1e03a76b3880ceb064530", "filename"=>"59272880995__EB088359-2C35-43EB-B27B-37013AF2F60C"}
+[36m  Cloudinary Storage (1.2ms) [0m[34mGenerated URL for file at key: hd33f071p58bzxltvfjferhkymus (http://res.cloudinary.com/nickfis/image/upload/hd33f071p58bzxltvfjferhkymus.jpg)[0m
+Redirected to http://res.cloudinary.com/nickfis/image/upload/hd33f071p58bzxltvfjferhkymus.jpg
+Completed 302 Found in 279ms (ActiveRecord: 5.4ms | Allocations: 3370)
+
+
+  [1m[36mActiveStorage::Blob Load (15.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Cloudinary Storage (0.2ms) [0m[34mGenerated URL for file at key: wudlqmqip3lw4b91yo49yz0w0aj7 (http://res.cloudinary.com/nickfis/image/upload/wudlqmqip3lw4b91yo49yz0w0aj7.jpg)[0m
+Redirected to http://res.cloudinary.com/nickfis/image/upload/wudlqmqip3lw4b91yo49yz0w0aj7.jpg
+Completed 302 Found in 27ms (ActiveRecord: 15.9ms | Allocations: 2198)
+
+
+Started GET "/products/1" for ::1 at 2019-11-11 09:19:58 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:83:in `set_product'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:18:in `show'
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:9
+  Rendered products/show.html.erb within layouts/application (Duration: 24.4ms | Allocations: 4311)
+Completed 200 OK in 59ms (Views: 49.9ms | ActiveRecord: 2.0ms | Allocations: 27139)
+
+

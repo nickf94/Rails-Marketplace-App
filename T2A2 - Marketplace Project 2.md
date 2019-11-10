@@ -25,7 +25,7 @@ modified: '2019-11-09T11:22:55.364Z'
 
 
 <h3> Description of my application </h3>
-<p>My idea for the Ruby on Rails Marketplace app was to do a simple motorbike part store, where people can come and buy different parts for the motorbikes. I came up with this idea because I love to ride my own motorbike and through talking to some of my classmates who said that I should make a store for motorbikes I decided that I would give it a go. On the main page you have a section of new parts available or any parts that are on special. You also have a navbar that goes to a page where all of the products on sale are viewed. You can sign up to a make an account to buy things and sign out once you have finished.</p> 
+<p>My idea for the Ruby on Rails Marketplace app was to do a simple motorbike part store, where people can come and buy different parts for the motorbikes. I came up with this idea because I love to ride my own motorbike and through talking to some of my classmates who said that I should make a store for motorbikes I decided that I would give it a go. On the main page you have a section of new parts available or any parts that are on special. You also have a navbar that goes to a page where all of the products on sale are viewed. You can sign up to a make an account to buy things and sign out once you have finished.</p>
 
 
 
@@ -47,7 +47,7 @@ modified: '2019-11-09T11:22:55.364Z'
 
 
 <h3>High-level components</h3>
-<p>For my rails application I used high-level components to get my code to work. I added some controllers, models and views to code up the back-end and front-end of my marketplace.</p> 
+<p>For my rails application I used high-level components to get my code to work. I added some controllers, models and views to code up the back-end and front-end of my marketplace.</p>
 
 <p>Controllers: The controllers i used for my application are as listed:</p>
 
@@ -99,6 +99,3 @@ Bulma - Bulma is a scss workframe that allows you to create scss styling to your
 
 <h3>Model relations within App</h3>
 <p>In my models I have implemented that a user can have many products and a product has an image attached and belongs to the users. Also a order can have many products.</p>
-
-
-

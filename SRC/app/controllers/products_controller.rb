@@ -36,7 +36,7 @@ class ProductsController < ApplicationController
      @product.user = current_user
      if @product.save
        flash[:alert] = "Your product has been saved"
-       redirect_to product_index_path
+       redirect_to root_path
      else
        flash[:alert] = @product.errors.full_messages.join('<br>')
        redirect_to new_product_path
