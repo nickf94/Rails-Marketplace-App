@@ -29,13 +29,14 @@ class ProductsController < ApplicationController
 
   # POST /products
   # POST /products.json
+  # def create generates the controller to create a product with the params that are specified in the product_params and image_params methods and then redirects back to the product page
   def create
      @product = Product.new(product_params)
      @product.image.attach(image_params[:image])
      @product.user = current_user
      if @product.save
        flash[:alert] = "Your product has been saved"
-       redirect_to root_path
+       redirect_to product_index_path
      else
        flash[:alert] = @product.errors.full_messages.join('<br>')
        redirect_to new_product_path
@@ -81,11 +82,13 @@ class ProductsController < ApplicationController
     def set_product
       @product = Product.find(params[:id])
     end
-
+    # def authorise is a controller that should authorise the user and allow them to create a product
     def authorise
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+
+    # These are the params methods that help make the product
     def product_params
       params.require(:product).permit(:name, :description, :price)
     end

@@ -1,3 +1,6 @@
+
+
+<!-- Made a simple navigation bar to direct users to and from pages and used bulma to style it -->
 <section class="container">
   <nav class="navbar level section has-text-right has-background-primary" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -14,7 +17,6 @@
         <div class="column is-one-quarter">
           <%= link_to '<i class="fas fa-sign-in-alt"></i>'.html_safe, new_user_session_path, class: "button is-info is-rounded" %>
         </div>
-
         <div class="column is-one-quarter">
           <%=link_to '<i class="fas fa-sign-out-alt"></i>'.html_safe, destroy_user_session_path, method: 'delete', class: "button is-warning is-rounded" %>
         </div>

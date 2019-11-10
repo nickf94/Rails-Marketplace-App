@@ -6,14 +6,15 @@
 </p>
 
 <p>
-  <%= image_tag product.image, width: 250 %>
+  <%= image_tag @product.image, width: 250 %>
 </p>
 
 <p style="font-size:18px">
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
-
+<!-- Here is where the show view will show the product when the user has clicked on the "show" link
+from the index page will then links to the "new order" page -->
 <div>
 <% if @product.price %>
 <p class="list-item" style="font-size:16px">
