@@ -23,12 +23,12 @@ and destroy the product if you're authorised to do so -->
       <tr>
         <td>
           <figure class="image is-square">
-            <%= @product.image.attached? ? image_tag(product.image) : '' %>
+            <%= product.image.attached? ? image_tag(product.image) : '' %>
           </figure>
         </td>
-        <td><%= @product.name %></td>
-        <td><%= @product.description %></td>
-        <td><%= @product.price %></td>
+        <td><%= product.name %></td>
+        <td><%= product.description %></td>
+        <td><%= product.price %></td>
         <td><%= link_to 'Show', product, class: "button is-small is-primary is-outlined is-rounded" %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "button is-small is-danger is-rounded" %></td>
       </tr>
