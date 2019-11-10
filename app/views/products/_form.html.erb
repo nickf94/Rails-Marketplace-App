@@ -2,7 +2,7 @@
   <% if @product.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
-
+<!-- A form to make the product that are on sale with there name, description, price and an image of the product -->
       <ul>
       <% product.errors.full_messages.each do |message| %>
         <li><%= message %></li>

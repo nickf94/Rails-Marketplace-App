@@ -15,6 +15,7 @@ class OrdersController < ApplicationController
   end
 
   # GET /orders/new
+  # Def new links a button in the view folder toredirect to stripe so user can pay for product
   def new
     @product = Product.find(params[:product_id])
     Stripe.api_key = "sk_test_x0726HmAcAWTa1au6c4UO9qH00jk1E452W"
